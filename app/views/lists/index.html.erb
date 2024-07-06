@@ -1,0 +1,11 @@
+<%= render "navbar" %>
+<%= render "banner" %>
+<div class="cards mx-2">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://smoothphotoscanning.com/wp-content/uploads/2020/07/pic-new-2-e1594364405908.jpg)">
+        <%= list.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

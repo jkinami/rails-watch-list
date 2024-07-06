@@ -1,0 +1,16 @@
+<%= render "navbar" %>
+<%= render "banner" %>
+<div class="d-flex justify-content-center mt-5">
+  <div class="card-trip w-25">
+    <img src="https://smoothphotoscanning.com/wp-content/uploads/2020/07/pic-new-2-e1594364405908.jpg" />
+    <div class="card-trip-infos d-flex justify-content-center">
+      <div>
+        <h2>New List</h2>
+        <%= simple_form_for(@list) do |f| %>
+          <%= f.input :name %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
