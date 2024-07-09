@@ -1,0 +1,9 @@
+<div class="cards mx-2">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <div class="card-movie">
+        <%= list.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

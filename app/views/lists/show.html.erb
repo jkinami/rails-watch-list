@@ -6,20 +6,5 @@
   <% end %>
 </div>
 <div class="container-fluid px-5">
- <div>
-    <div class="justify-content-center cards">
-      <% @list.bookmarks.each do |bookmark| %>
-        <div class="card-movie-info">
-        <img src="<%= bookmark.movie.poster_url %>" />
-          <div class="card-movie-infos">
-            <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-              <i class="fa-solid fa-square-minus"></i>
-            <% end %>
-            <h2><%= bookmark.movie.title %></h2>
-            <p><%= bookmark.comment %></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render "movie_grid", list: @list %>
 </div>

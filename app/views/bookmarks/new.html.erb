@@ -2,28 +2,19 @@
 <div class="container-fluid mx-0">
   <div class="row mx-0">
     <div class="justify-content-center col">
-      <div class="card-trip w-100 sticky-top mt-5">
+      <div class="card-form w-100 sticky-top mt-5">
         <img src="https://smoothphotoscanning.com/wp-content/uploads/2020/07/pic-new-2-e1594364405908.jpg" />
-        <div class="card-trip-infos d-flex justify-content-center">
+        <div class="card-form-infos d-flex justify-content-center">
           <div>
             <h2>New Bookmark</h2>
-            <%= simple_form_for [@list, @bookmark] do |f| %>
-              <%= f.input :comment %>
-              <%= f.input :movie_id, collection: Movie.all, label_method: :title, value_method: :id, prompt: "Select a Movie" %>
-              <%= f.submit %>
-            <% end %>
+            <%= render "form", list: @list, bookmark: @bookmark %>
           </div>
         </div>
       </div>
     </div>
     <div class="col-9">
       <h1 class="fw-bold mt-5">Top rated Movies</h1>
-      <div class="justify-content-center cards">
-        <% @movies.each do |movie| %>
-          <div class="card-movie" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url %>)">
-            <%= movie.title %>
-          </div>
-        <% end %>
+      <%= render "movie_card", movies: @movies %>
     </div>
   </div>
 </div>
