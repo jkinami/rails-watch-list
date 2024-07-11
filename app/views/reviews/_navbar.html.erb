@@ -1,9 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <i class="fa-solid fa-film"></i>
-      <%# <img src="https://st4.depositphotos.com/17553142/24911/v/450/depositphotos_249116594-stock-illustration-film-reel-simple-vector-icon.jpg" /> %>
-</a>
+    <%= link_to lists_path, class: "navbar-brand" do %>
+      <i class="fa-solid fa-film fs-4 ms-3 text-secondary"></i>
+    <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
