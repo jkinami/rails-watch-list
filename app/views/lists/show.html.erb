@@ -8,3 +8,15 @@
 <div class="container-fluid px-5">
   <%= render "movie_grid", list: @list %>
 </div>
+<div class="container-fluid my-3 ms-5 d-flex align-items-center">
+  <span class="fw-bold fs-2">Reviews</span>
+  <%= link_to new_list_review_path(@list) do %>
+    <i class="fa-solid fa-circle-plus fs-4 ms-3 text-primary"></i>
+  <% end %>
+</div>
+<div class="container-fluid px-5">
+  <% @list.reviews.each do |review| %>
+    <%= render "review", review: review %>
+  <% end %>
+</div>
+</div>
